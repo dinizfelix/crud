@@ -13,7 +13,6 @@ if(isset($_POST['cadastrar'])){
     $usuario->setSobrenome($d['sobrenome']);
     $usuario->setIdade($d['idade']);
     $usuario->setSexo($d['sexo']);
-
     $usuariodao->create($usuario);
 
     header("Location: ../../");
@@ -25,7 +24,6 @@ else if(isset($_POST['editar'])){
     $usuario->setIdade($d['idade']);
     $usuario->setSexo($d['sexo']);
     $usuario->setId($d['id']);
-
     $usuariodao->update($usuario);
 
     header("Location: ../../");
